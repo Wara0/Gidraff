@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>{%block title%}{%endblock%}</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Contacts</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <a href="{%url 'phonebook:add-contact'%}"class="nav-link">Add contact</a>
+        </li>
+        <li class="nav-item">
+            <a href=""class="nav-link">logout</a>
+        </li>
+    </ul>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>
